@@ -1,5 +1,5 @@
 #!/bin/bash
 configs=("baseline" "freelist" "freetree");
 for config in "${configs[@]}"; do
-	dub test --config="${config}" --compiler="${DC}";
+	dub test -b release --config="${config}" --compiler="${DC}";
 done;
