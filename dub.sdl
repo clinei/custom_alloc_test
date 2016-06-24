@@ -1,0 +1,14 @@
+name "freelist"
+
+dependency "containers" version=">=0.2.2"
+
+configuration "freelist" {
+	targetType "executable"
+	targetName "freelist"
+	versions "freelist" "stats"
+}
+configuration "baseline" {
+	targetType "executable"
+	targetName "baseline"
+	versions "stats"
+}
