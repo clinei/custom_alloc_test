@@ -1,4 +1,4 @@
-name "freelist"
+name "custom_alloc_test"
 
 dependency "containers" version=">=0.2.2"
 
@@ -7,6 +7,13 @@ configuration "freelist" {
 	targetName "freelist"
 	versions "freelist" "stats"
 }
+
+configuration "freetree" {
+	targetType "executable"
+	targetName "freetree"
+	versions "freetree" "stats"
+}
+
 configuration "baseline" {
 	targetType "executable"
 	targetName "baseline"

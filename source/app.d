@@ -21,6 +21,11 @@ void main()
 		import std.experimental.allocator.building_blocks.free_list : FreeList;
 		alias Allocator = FreeList!(ParentAllocator, U.sizeof);
 	}
+	else version(freetree)
+	{
+		import std.experimental.allocator.building_blocks.free_tree : FreeTree;
+		alias Allocator = FreeTree!(ParentAllocator);
+	}
 	else
 	{
 		alias Allocator = ParentAllocator;
